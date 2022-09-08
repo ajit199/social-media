@@ -15,7 +15,8 @@ export function MainRoutes() {
                 <Route index path="/" element={user ? <Home /> : <Register />} />
                 <Route path="/login" element={user ? <Navigate to="/" replace /> : <Login />} />
                 <Route path="/register" element={user ? <Navigate to={"/"} replace /> : <Register />} />
-                <Route path="/messanger" element={!user ? <Navigate to={"/"} replace /> : <Messanger />} />
+                <Route path="/messanger" element={<Messanger />} />
+                {/* !user ? <Navigate to={"/"} replace /> : */}
                 <Route path="profile/:username" element={<Profile />} />
             </Routes>
         </>

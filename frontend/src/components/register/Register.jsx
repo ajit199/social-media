@@ -46,9 +46,9 @@ export function Register() {
                         <input placeholder="Email" required type={"email"} className="loginInput" ref={email} />
                         <input placeholder="Password" minLength={6} required type={"password"} className="loginInput" ref={password} />
                         <input placeholder="Confirm Password" required type={"password"} className="loginInput" ref={confirmPassword} />
-                        <button className="loginButton">Sign Up</button>
+                        <button className="loginButton" type={"submit"}>Sign Up</button>
                         {/* <Link to="/login"> */}
-                        <button className="loginRegisterButton">
+                        <button className="loginRegisterButton" type={"button"} onClick={() => navigate("/login", { replace: true })}>
                             Log into Account
                         </button>
                         {/* </Link> */}

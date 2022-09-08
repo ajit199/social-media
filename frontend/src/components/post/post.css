@@ -76,3 +76,54 @@
   border-bottom: 1px dashed gray;
   font-size: 15px;
 }
+
+.postCommentInput {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  position: relative;
+}
+
+.commentInput {
+  flex-grow: 1;
+  margin-left: 19px;
+  border-radius: 18px;
+  border: 1px solid lightgray;
+  font-size: 17px;
+  padding: 5px;
+  background-color: #eff3fb;
+}
+
+.commentInput:focus {
+  outline: none;
+}
+
+.postComment {
+  display: flex;
+  margin-top: 16px;
+}
+
+.enterMsg {
+  font-size: 13px;
+  margin: 5px 0px 5px 60px;
+}
+
+.postCommentDetails {
+  margin-left: 19px;
+  border-radius: 18px;
+  border: 1px solid lightgray;
+  font-size: 17px;
+  padding: 5px 8px;
+  background-color: #eff3fb;
+  box-sizing: border-box;
+}
+
+.postCommentUser {
+  display: inline-block;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.postCommentMessage {
+  font-size: 15px;
+}

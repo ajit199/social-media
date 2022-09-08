@@ -1,7 +1,7 @@
 import { Feed } from "../../components/feed/Feed";
 import { Leftbar } from "../../components/leftbar/Leftbar";
 import { Rightbar } from "../../components/rightbar/Rightbar";
-import { Topbar } from "../../components/topbar/Topbar";
+import Topbar from "../../components/topbar/Topbar";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import "./profile.css";
@@ -25,7 +25,7 @@ export function Profile() {
                     <div className="profileRightTop">
                         <div className="profileCover">
                             <img src={user.coverPicture || publicUrl + "person/no-cover.png"} alt="userCoverImg" className="profileCoverImg" />
-                            <img src={user.profilePicture || publicUrl + "person/no-avatar.png"} alt="userProfileImg" className="profileUserImg" />
+                            <img src={publicUrl + user.profilePicture || publicUrl + "person/no-avatar.png"} alt="userProfileImg" className="profileUserImg" />
                         </div>
                         <div className="profileInfo">
                             <h4 className="profileInfoName" style={{ textTransform: "capitalize" }}>{user.username}</h4>

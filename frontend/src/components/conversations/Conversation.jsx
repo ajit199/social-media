@@ -13,7 +13,7 @@ export function Conversation({ conversation, currentUser }) {
     }, [currentUser, conversation])
     return (
         <div className="conversation">
-            <img src={friend?.profilePicture ? friend?.profilePicture : publicUrl + "person/no-avatar.png"} alt="" className="conversationImg" />
+            <img src={friend?.profilePicture ? publicUrl + friend?.profilePicture : publicUrl + "person/no-avatar.png"} alt="" className="conversationImg" />
             <span className="conversationName" style={{ textTransform: "capitalize" }}>{friend?.username}</span>
         </div>
     )

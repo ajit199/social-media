@@ -8,7 +8,7 @@ import "./feed.css";
 export function Feed({ username }) {
     let [posts, setPosts] = useState([]);
     let { user } = useContext(AuthContext)
-    // console.log(username)
+    // console.log(username) 
     useEffect(() => {
         username ? axios("/posts/profile/" + username)
             .then(res => {

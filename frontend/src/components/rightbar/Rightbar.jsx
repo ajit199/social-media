@@ -11,14 +11,14 @@ export function Rightbar({ user }) {
     let publicUrl = process.env.REACT_APP_PUBLIC_FOLDER;
     let [friends, setFriends] = useState([]);
     let { user: currentUser, dispatch } = useContext(AuthContext);
-    let [isFollow, setIsFollow] = useState(currentUser.following.includes(user?._id));
+    let [isFollow, setIsFollow] = useState(currentUser.followings.includes(user?._id));
 
     // useEffect(() => {
-    //     setIsFollow(currentUser.following.includes(user?._id));
+    //     setIsFollow(currentUser.followings.includes(user?._id));
     // }, [currentUser, user._id])
     useEffect(() => {
         if (user) {
-            axios("/users/friends/" + user._id)
+            axios("/users/friends/" + currentUser._id)
                 .then(response => {
                     setFriends(response.data)
                 })

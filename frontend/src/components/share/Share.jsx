@@ -22,7 +22,7 @@ export function Share() {
             formData.append("name", fileName);
             post.img = fileName;
             try {
-                await axios.post("http://localhost:8000/api/upload", formData);
+                await axios.post("https://social-media-app-backend-web16.herokuapp.com/api/upload", formData);
             } catch (error) {
                 console.log(error)
             }
@@ -38,7 +38,7 @@ export function Share() {
         <div className="share">
             <div className="shareWrapper">
                 <div className="shareTop">
-                    <img src={user.profilePicture ? user.profilePicture : publicUrl + "person/np-avatar.png"} alt="profilePic" className="shareProfileImg" />
+                    <img src={user.profilePicture ? publicUrl + user.profilePicture : publicUrl + "person/no-avatar.png"} alt="profilePic" className="shareProfileImg" />
                     <input placeholder={"what's is in your mind " + user.username + "?"} ref={desc} className="shareInput" />
                 </div>
                 <hr className="shareHr" />

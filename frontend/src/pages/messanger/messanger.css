@@ -4,6 +4,9 @@
   /* column-gap: 5px; */
 }
 
+.rightbarTitle {
+  margin-bottom: 20px;
+}
 .chatMenu {
   flex: 3.5;
 }
@@ -47,6 +50,10 @@
   width: 80%;
   height: 90px;
   padding: 10px;
+}
+
+.chatMessageInput:focus {
+  outline: none;
 }
 
 .chatSubmitButton {
